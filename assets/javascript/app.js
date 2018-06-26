@@ -34,14 +34,14 @@ function displayGifs() {
       for (var i = 0; i < results.length; i++) {
         var gifDiv = $("<div class='item'>");
         var rating = results[i].rating;
-        var p = $("<p>").text("Rating: " + rating);
+        var r = $("<p>").text("Rating: " + rating);
         var heroImage = $("<img>");
         heroImage.attr("src", results[i].images.fixed_height_still.url);
         heroImage.attr("data-still", results[i].images.fixed_height_still.url);
         heroImage.attr("data-animate", results[i].images.fixed_height.url);
         heroImage.attr("data-state", "still");
         heroImage.addClass("gif");
-        gifDiv.append(p);
+        gifDiv.append(r);
         gifDiv.append(heroImage);
         $("#gifs-appear-here").prepend(gifDiv);
       }
